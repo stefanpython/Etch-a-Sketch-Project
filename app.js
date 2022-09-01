@@ -2,15 +2,9 @@ const container = document.querySelector(".container");
 
 let gridSize = 16;
 
-function makeGrid(screenSize) {
-    for (let i = 0; i < screenSize ** 2; i++) {
-        let square = document.createElement('div');
-        square.classList.add('square');
-        square.style.background = 'blue';
-        container.appendChild(square);
-    }
-    container.style.gridTemplateColumns = 'repeat(16, auto)';
-    container.style.gridTemplateRows = 'repeat(16, auto)';
+for (let i = 0; i < gridSize ** 2; i++) {
+    const div = document.createElement('div');
+    div.style.cssText = "border: 1px solid black; height: 25px; width: 25px";
+    div.classList = 'square'
+    container.appendChild(div);
 }
-
-makeGrid(gridSize);
