@@ -1,4 +1,4 @@
-const button = document.querySelector("button");
+const button = document.querySelector(".cat");
 button.addEventListener("click", createGrid);
 
 function createGrid() {
@@ -6,6 +6,7 @@ function createGrid() {
     let container = document.querySelector(".container");
     let numOfRows = prompt("Enter number of rows <= 100.");
 
+    // Make sure that the user`s input is under 100;
     while (numOfRows > 100) {
         numOfRows = prompt("Enter number of rows <= 100.");
     }
@@ -15,6 +16,7 @@ function createGrid() {
 
     for (let i =  0; i < numOfRows ** 2; i++) {
       let div = document.createElement("div");
+      div.classList = "square";
       container.appendChild(div);
       // Add hover effect when passing mouse over squares
       div.addEventListener("mouseenter", () => {
@@ -23,4 +25,11 @@ function createGrid() {
     }
   }
   
+// Function and button to reset all squares to default
+const reset = document.querySelector(".reset");
+reset.addEventListener('click', resetAll)
 
+function resetAll() {
+        let square = document.querySelectorAll(".square");
+        square.forEach(box => box.style.backgroundColor = 'white');
+}
