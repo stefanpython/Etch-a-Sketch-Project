@@ -1,9 +1,15 @@
 const button = document.querySelector(".cat");
-button.addEventListener("click", createGrid);
+button.addEventListener("click", () => {
+        createGrid();
+});
+
+
 
 function createGrid() {
     
     let container = document.querySelector(".container");
+    container.innerHTML = '';
+
     let numOfRows = prompt("Enter number of rows <= 100.");
 
     // Make sure that the user`s input is under 100;
@@ -25,7 +31,7 @@ function createGrid() {
     }
   }
   
-// Function and button to reset all squares to default
+// Function to reset all squares to default when reset button is pressed
 const reset = document.querySelector(".reset");
 reset.addEventListener('click', resetAll)
 

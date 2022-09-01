@@ -1,10 +1,25 @@
+:root {
+    --columns-row: 2;
+  }
+  
+
 .container {
     display: grid;
     grid-template-columns: repeat(var(--columns-row), 1fr);  
     width: 600px;
     height: 600px;
+    
 }
 
 div {
    border: 1px groove rgb(138, 138, 132);
+}
+
+.reset {
+    size: 20px;
+}
+
+body {
+    background-image: url('https://i.pinimg.com/originals/7b/08/64/7b0864456aab583193c7776d80a4c493.gif');
+    background-size: cover;
 }
