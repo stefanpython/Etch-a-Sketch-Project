@@ -1,10 +1,16 @@
-const container = document.querySelector(".container");
+function createGrid() {
+    
+    let container = document.querySelector(".container");
+    let numOfRows = 16; //prompt("Enter number of rows <= 100.");
+    
+    // Replace the --columns-row value in css with numOfRows value
+    document.documentElement.style.setProperty("--columns-row", numOfRows);
 
-let gridSize = 16;
-
-for (let i = 0; i < gridSize ** 2; i++) {
-    const div = document.createElement('div');
-    div.style.cssText = "border: 1px groove #ede9dd; height: 35px; width: 35px";
-    div.classList = 'square'
-    container.appendChild(div);
-}
+    for (let i =  0; i < numOfRows ** 2; i++) {
+      let div = document.createElement("div");
+      container.appendChild(div);
+    
+    }
+  }
+  
+  createGrid();
