@@ -10,11 +10,11 @@ function createGrid() {
     let container = document.querySelector(".container");
     container.innerHTML = '';
 
-    let numOfRows = prompt("Enter number of rows <= 100.");
+    let numOfRows = prompt("Enter number of rows less than 100.");
 
     // Make sure that the user`s input is under 100;
     while (numOfRows > 100) {
-        numOfRows = prompt("Enter number of rows <= 100.");
+        numOfRows = prompt("Enter number of rows less than 100.");
     }
     
     // Set value of the variable --columns-row in CSS with the value of the variable numOfRows

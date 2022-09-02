@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Trocchi&display=swap');
+
+
 :root {
     --columns-row: 2;
   }
@@ -6,8 +9,8 @@
 .container {
     display: grid;
     grid-template-columns: repeat(var(--columns-row), 1fr);  
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     
 }
 
@@ -20,7 +23,7 @@ div {
 }
 
 body {
-    background-image: url('https://p0.piqsels.com/preview/187/979/746/pencils-yellow-business-drawing.jpg');
+    background-image: url('https://img.freepik.com/free-vector/pastel-vector-dull-pastel-abstract-textured-background_53876-110546.jpg?w=2000');
     background-size: cover;
 }
 
@@ -34,4 +37,8 @@ footer {
     display: flex;
     flex-direction: column;
     margin-top: -5px;
+}
+
+h1 {
+    font-family: "Trocchi", serif;
 }
