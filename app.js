@@ -26,7 +26,7 @@ function createGrid() {
       container.appendChild(div);
       // Add hover effect when passing mouse over squares
       div.addEventListener("mouseenter", () => {
-        div.style.background = '#009999';
+        div.style.background = randomColor();
       })
     }
   }
@@ -38,4 +38,14 @@ reset.addEventListener('click', resetAll)
 function resetAll() {
         let square = document.querySelectorAll(".square");
         square.forEach(box => box.style.backgroundColor = 'white');
+}
+
+// Function to change to random color
+function randomColor() {
+  let x = Math.floor(Math.random() * 256);
+  let y = 100 + Math.floor(Math.random() * 256);
+  let z = 50 + Math.floor(Math.random() * 256);
+  let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+  return bgColor;
 }
