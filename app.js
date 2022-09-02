@@ -21,12 +21,14 @@ function createGrid() {
     document.documentElement.style.setProperty("--columns-row", numOfRows);
 
     for (let i =  0; i < numOfRows ** 2; i++) {
+
       let div = document.createElement("div");
       div.classList = "square";
       container.appendChild(div);
+
       // Add hover effect when passing mouse over squares
       div.addEventListener("mouseenter", () => {
-        div.style.background = randomColor();
+        div.style.background = randomColor(); // Added randomColor function to change color on each square
       })
     }
   }
@@ -42,9 +44,10 @@ function resetAll() {
 
 // Function to change to random color
 function randomColor() {
+
   let x = Math.floor(Math.random() * 256);
-  let y = 100 + Math.floor(Math.random() * 256);
-  let z = 50 + Math.floor(Math.random() * 256);
+  let y = 70 + Math.floor(Math.random() * 256);
+  let z = 20 + Math.floor(Math.random() * 256);
   let bgColor = "rgb(" + x + "," + y + "," + z + ")";
 
   return bgColor;

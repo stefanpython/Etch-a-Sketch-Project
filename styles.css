@@ -23,3 +23,15 @@ body {
     background-image: url('https://p0.piqsels.com/preview/187/979/746/pencils-yellow-business-drawing.jpg');
     background-size: cover;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.git {
+    display: flex;
+    flex-direction: column;
+    margin-top: -5px;
+}
